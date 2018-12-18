@@ -1,5 +1,9 @@
 # weakmap-oid
 
+[![Build Status](https://travis-ci.org/hyjk2000/weakmap-oid.svg?branch=master)](https://travis-ci.org/hyjk2000/weakmap-oid)
+
+[![npm](https://nodei.co/npm/weakmap-oid.png)](https://nodei.co/npm/weakmap-oid/)
+
 Generate unique object IDs with WeakMap-based identity set.
 
 ## Why do I need this?
