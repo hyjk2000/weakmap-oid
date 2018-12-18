@@ -4,7 +4,7 @@
   "description": "Generate unique object IDs with WeakMap-based identity set.",
   "main": "lib/oid.js",
   "scripts": {
-    "test": "node --expose-gc test/oid-test.js"
+    "test": "node --harmony --expose-gc test/oid-test.js"
   },
   "engine": {
     "node": ">=0.12"

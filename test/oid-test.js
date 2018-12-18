@@ -1,7 +1,6 @@
 "use strict";
 
 const assert = require("assert");
-const util = require("util");
 
 const Oid = require("../lib/oid");
 const subject = new Oid();
@@ -37,12 +36,8 @@ global.gc();
   assert.equal(true, oid.equal(b, c));
 })(subject);
 
-(function test_gc(oid) {
+(function test_internal_incrementor(oid) {
   assert.equal(5, oid._incrementor);
-  assert.equal(
-    "WeakMap { {} => 2, {} => 3, {} => 4, {} => 5 }",
-    util.inspect(oid._identities, { showHidden: true })
-  );
 })(subject);
 
 console.log("All tests passed.");
