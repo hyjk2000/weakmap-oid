@@ -1,0 +1,31 @@
+{
+  "name": "weakmap-oid",
+  "version": "0.1.0",
+  "description": "Generate unique object IDs with WeakMap-based identity set.",
+  "main": "lib/oid.js",
+  "scripts": {
+    "test": "node --expose-gc test/oid-test.js"
+  },
+  "engine": {
+    "node": ">=0.12"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hyjk2000/weakmap-oid.git"
+  },
+  "keywords": [
+    "object",
+    "id",
+    "identity",
+    "weakmap"
+  ],
+  "author": {
+    "name": "James Shih",
+    "url": "https://hyjk2000.github.io"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hyjk2000/weakmap-oid/issues"
+  },
+  "homepage": "https://github.com/hyjk2000/weakmap-oid#readme"
+}
