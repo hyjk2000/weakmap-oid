@@ -9,11 +9,14 @@ node_js:
   - 'lts/*'
   - 'node'
 
-deploy:
-  provider: npm
-  email: gtx1024+npm@gmail.com
-  api_key:
-    secure: b6q+7QB1pQlt998uB3E3fSgzgDL8Wzi7TochhvPzowiUrb79070bYK2RWqPYRwhIohQCpJIW+QMD4w0Gyy7A3xXODxcEQyF7p+jKr16iQ7J6KrWxt5E+sxTo2j+LJEPf9HGMjsNEI48fP3R2F5IV2CawU2H2UTq5fso4ELYSwkfxmgBY6NmkoWGaNeCbp8MyUG3wk3JlikWFxEwUujmbXrrah+b8PpMxEIzZQV61BC5QbfCPGzavEKnKJm2vxyLSTCWmZJW3GdRNpQWuCvA4rYSqe2f3b8Fd8R3wppwwSaLguEXIA54kGsEIhfZzJ5ALbKQy+Uh9gNC6Vkjx/KZVyedI3Sr2ac9jLpBdBikB+k8MFSHEFnTWof7/Sq7UkdwWhyX8xGPO45Z8vjxSrwNWc4/8x1hH5teudK+HVB9XKrUmQWq5OynBqcadb55qH1etrWJfWL/phoVP/xjH8+30LwoBfKQOD3lVEAGjEeo8VgQF4ulJGyfgt6FJQoIj4lEUUGLAX3eUDdv0v+dhOZsJ7l+5xF80NZ1yZX6w0ukwMHCoFB+WieecZYz22nfugniub5xiX398Lm7jNnJSy7GDlflD9crE2814VAB8gK2bLkcHORbs+J9gaPMyPRJXnNhShY7clCssmitmMHRh1z8fmGDpd7hl78fuJlL45Wwx/aM=
-  on:
-    tags: true
-
+jobs:
+  include:
+    - stage: deploy
+      node_js: 'lts/*'
+      deploy:
+        provider: npm
+        email: gtx1024+npm@gmail.com
+        api_key:
+          secure: b6q+7QB1pQlt998uB3E3fSgzgDL8Wzi7TochhvPzowiUrb79070bYK2RWqPYRwhIohQCpJIW+QMD4w0Gyy7A3xXODxcEQyF7p+jKr16iQ7J6KrWxt5E+sxTo2j+LJEPf9HGMjsNEI48fP3R2F5IV2CawU2H2UTq5fso4ELYSwkfxmgBY6NmkoWGaNeCbp8MyUG3wk3JlikWFxEwUujmbXrrah+b8PpMxEIzZQV61BC5QbfCPGzavEKnKJm2vxyLSTCWmZJW3GdRNpQWuCvA4rYSqe2f3b8Fd8R3wppwwSaLguEXIA54kGsEIhfZzJ5ALbKQy+Uh9gNC6Vkjx/KZVyedI3Sr2ac9jLpBdBikB+k8MFSHEFnTWof7/Sq7UkdwWhyX8xGPO45Z8vjxSrwNWc4/8x1hH5teudK+HVB9XKrUmQWq5OynBqcadb55qH1etrWJfWL/phoVP/xjH8+30LwoBfKQOD3lVEAGjEeo8VgQF4ulJGyfgt6FJQoIj4lEUUGLAX3eUDdv0v+dhOZsJ7l+5xF80NZ1yZX6w0ukwMHCoFB+WieecZYz22nfugniub5xiX398Lm7jNnJSy7GDlflD9crE2814VAB8gK2bLkcHORbs+J9gaPMyPRJXnNhShY7clCssmitmMHRh1z8fmGDpd7hl78fuJlL45Wwx/aM=
+        on:
+          tags: true
